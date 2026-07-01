@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ESchool Portal - About</title>
+    <meta charset="UTF-8"/>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .page-content {
+            flex: 1;
+            max-width: 900px;
+            margin: 48px auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        .card h1 {
+            color: #1a237e;
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+        .card .subtitle {
+            color: #7986cb;
+            font-size: 15px;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e8eaf6;
+        }
+        .card p {
+            color: #555;
+            line-height: 1.9;
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+        .stats {
+            display: flex;
+            gap: 24px;
+            margin-top: 32px;
+        }
+        .stat-box {
+            flex: 1;
+            background: #e8eaf6;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .stat-box h3 { color: #1a237e; font-size: 28px; }
+        .stat-box p { color: #555; font-size: 13px; margin: 0; }
+    </style>
+</head>
+<body>
+
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+<div class="page-content">
+    <div class="card">
+        <h1>About ESchool Portal</h1>
+        <p class="subtitle">Empowering students and educators since 2010</p>
+        <p>
+            ESchool Portal is a comprehensive academic management system designed to bridge
+            the gap between students, faculty, and administration. Our platform provides
+            seamless access to academic resources, announcements, and institutional services.
+        </p>
+        <p>
+            Built with modern technology, our portal ensures that every student has access
+            to the tools they need to succeed — from course materials and exam schedules
+            to fee management and event registrations.
+        </p>
+        <div class="stats">
+            <div class="stat-box">
+                <h3>5000+</h3>
+                <p>Students Enrolled</p>
+            </div>
+            <div class="stat-box">
+                <h3>200+</h3>
+                <p>Faculty Members</p>
+            </div>
+            <div class="stat-box">
+                <h3>50+</h3>
+                <p>Courses Offered</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+</body>
+</html>
